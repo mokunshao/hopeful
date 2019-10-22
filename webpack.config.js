@@ -1,18 +1,10 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
-  mode: 'production',
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: 'styles',
-          test: /\.css$/,
-          chunks: 'all',
-          enforce: true,
-        },
-      },
-    },
-  },
+  mode: 'development',
+  entry: { hopeful: path.resolve(__dirname, 'src/index.js') },
+  output: { path: path.resolve(__dirname, 'dist'), filename: '[name].js' },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
