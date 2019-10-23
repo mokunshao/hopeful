@@ -1,21 +1,8 @@
+const config = require('./webpack.config.dev.js');
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  ...config,
   mode: 'production',
-  entry: { hopeful: path.resolve(__dirname, 'src/index.js') },
-  output: { path: path.resolve(__dirname, 'docs'), filename: '[name].js' },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-      },
-    ],
-  },
+  output: { path: path.resolve(__dirname, 'doc'), filename: '[name].js' },
 };

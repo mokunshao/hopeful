@@ -19,7 +19,8 @@ module.exports = {
         collapseWhitespace: true,
       },
       filename: 'index.html',
-      template: path.resolve(__dirname, 'index.html'),
+      template: path.resolve(__dirname, 'docs-src/index.html'),
+      title: 'hopeful',
     }),
   ],
   module: {
