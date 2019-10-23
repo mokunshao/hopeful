@@ -5134,7 +5134,7 @@ uglify-js@3.4.x:
     commander "~2.19.0"
     source-map "~0.6.1"
 
-uglify-js@^3.6.0, uglify-js@^3.6.3:
+uglify-js@^3.6.0:
   version "3.6.3"
   resolved "https://registry.npm.taobao.org/uglify-js/download/uglify-js-3.6.3.tgz?cache=0&sync_timestamp=1571486675984&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuglify-js%2Fdownload%2Fuglify-js-3.6.3.tgz#1351533bbe22cc698f012589ed6bd4cbd971bff8"
   integrity sha1-E1FTO74izGmPASWJ7WvUy9lxv/g=
