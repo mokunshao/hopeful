@@ -1,21 +1,33 @@
 import Header from './components/header/header.js';
+import Main from './components/main/main.js';
 import './example.scss';
 
 const header = new Header();
+const main = new Main();
 
 const App = ($) => {
-  const $app = $('#app');
+  const $header = $('#header');
+  const $main = $('#main');
+  // const $footer = $('#footer');
+  const bindEvent = () => {
+    window.addEventListener('hashchange', function() {
+      render();
+    });
+  };
   const init = () => {
+    _renderHeader();
     render();
+    bindEvent();
   };
   const render = () => {
-    _renderHeader();
     _renderMain();
   };
   const _renderHeader = () => {
-    $app.append(header.tpl({ title: 'Hopeful' }));
+    $header.html(header.tpl({ title: 'Hopeful' }));
   };
-  const _renderMain = () => {};
+  const _renderMain = () => {
+    $main.html(main.tpl(location.hash));
+  };
   init();
 };
 App(Zepto);
