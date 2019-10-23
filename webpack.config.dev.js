@@ -6,7 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: { hopeful: path.resolve(__dirname, 'src/index.js') },
+  entry: {
+    hopeful: path.resolve(__dirname, 'src/index.js'),
+    example: path.resolve(__dirname, 'docs-src/example.js'),
+  },
   output: { path: path.resolve(__dirname, 'dist'), filename: '[name].js' },
   plugins: [
     new uglifyJs(),
@@ -48,8 +51,8 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: path.resolve(__dirname, 'node_modules'),
-        query: {
-          presets: ['latest'],
+        options: {
+          presets: ['@babel/preset-env'],
         },
       },
       {
