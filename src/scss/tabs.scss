@@ -1,0 +1,29 @@
+.tabs {
+  &-head {
+    border: 1px solid black;
+    display: flex;
+
+    .tab {
+      padding: $padding;
+      cursor: pointer;
+      border: 1px solid black;
+      margin: -1px;
+
+      &.active {
+        background-color: gray;
+      }
+    }
+  }
+
+  &-body {
+    border: 1px solid black;
+
+    .pane {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

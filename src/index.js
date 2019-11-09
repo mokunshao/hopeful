@@ -1,2 +1,5 @@
 import './scss/index.scss';
-import './js/index';
+import { Tabs } from './js/index';
+
+export { Tabs };
+export default { Tabs };
