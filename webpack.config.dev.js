@@ -39,7 +39,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              plugins: function() {
+              plugins: function () {
                 return [autoprefixer('last 5 versions')];
               },
             },
@@ -54,10 +54,6 @@ module.exports = {
         options: {
           presets: ['@babel/preset-env'],
         },
-      },
-      {
-        test: /\.ejs$/,
-        loader: 'ejs-loader',
       },
       {
         test: /\.(png|jpg|jpeg|gif|ico)$/i,
