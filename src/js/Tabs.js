@@ -1,4 +1,5 @@
 export function Tabs(id, index) {
+  if (!id) return;
   this.element = document.querySelector(id);
   this.head = this.element.querySelector('.tabs-head');
   this.tabs = this.element.querySelectorAll('.tabs-head .tab');

@@ -1,13 +1,8 @@
 import './example.scss';
-import { Tabs } from '../src/index';
+import { Tabs, AutoTabs } from '../src/index';
 
-// function callback(value) {
-//   console.log(value);
-// }
-
-const tabs = new Tabs('#tabs1');
-// const tabs2 = new Tabs('#tabs2', callback);
-const tabs2 = new Tabs('#tabs2', 2);
+const tabs = new Tabs('#tabs1', 2);
+const tabs2 = new AutoTabs('#tabs2', 2);
 
 tabs.init();
 tabs2.init();
