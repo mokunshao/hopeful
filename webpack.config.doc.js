@@ -10,7 +10,7 @@ module.exports = {
     hopeful: path.resolve(__dirname, 'src/index.js'),
     example: path.resolve(__dirname, 'docs-src/example.js'),
   },
-  output: { path: path.resolve(__dirname, 'docs'), filename: '[name].min.js' },
+  output: { libraryTarget: 'umd', path: path.resolve(__dirname, 'docs'), filename: '[name].min.js' },
   plugins: [
     new UglifyJs(),
     new MiniCssExtractPlugin({

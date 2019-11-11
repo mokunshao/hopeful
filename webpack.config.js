@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   mode: 'production',
   entry: { hopeful: path.resolve(__dirname, 'src/index.js') },
-  output: { path: path.resolve(__dirname, 'dist'), filename: '[name].min.js' },
+  output: { libraryTarget: 'umd', path: path.resolve(__dirname, 'dist'), filename: '[name].min.js' },
   plugins: [
     new UglifyJs(),
     new MiniCssExtractPlugin({

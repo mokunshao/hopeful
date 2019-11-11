@@ -1,1 +1,1 @@
-
+.tabs-head{border:1px solid #000;display:-webkit-box;display:-ms-flexbox;display:flex}.tabs-head .tab{padding:.3em .5em;cursor:pointer;border:1px solid #000;margin:-1px}.tabs-head .tab.active{background-color:gray}.tabs-body{border:1px solid #000}.tabs-body .pane{display:none}.tabs-body .pane.active{display:block}
